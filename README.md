@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+# GIFtdotcom - Online Gift Card Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Architecture Diagram](assets/architecture%20diagram.png "Architecture Diagram")
 
-## Available Scripts
+GIFtdotcom is a full-featured e-commerce platform specializing in digital gift cards for popular games and services. Built with React, Redux, Firebase, and Stripe, this application provides end-to-end functionality from browsing products to secure checkout and payment processing.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Authentication**: Secure login and registration using Firebase Authentication
+- **Product Browsing**: Browse through various gift cards from popular platforms
+- **Shopping Cart**: Add and remove items from your shopping cart
+- **Order History**: View your past orders and purchase details
+- **Secure Payments**: Process payments securely using Stripe integration
+- **Responsive Design**: Fully responsive interface that works on desktop and mobile devices
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: React.js with Redux for state management
+- **UI Components**: Material UI
+- **Authentication**: Firebase Authentication
+- **Database**: Firebase Firestore
+- **Payment Processing**: Stripe
+- **Hosting**: Firebase Hosting
+- **Backend Functions**: Firebase Cloud Functions
 
-### `npm test`
+## Installation and Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14 or higher)
+- npm or yarn
+- Firebase CLI (`npm install -g firebase-tools`)
+- A Firebase project
+- A Stripe account
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```
+   git clone https://github.com/Prithvicy/Giftdotcom.git
+   cd Giftdotcom
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies in the main project directory:
+   ```
+   npm install
+   ```
 
-### `npm run eject`
+3. Install dependencies in the functions folder:
+   ```
+   cd functions
+   npm install
+   cd ..
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the Firebase emulators for local development:
+   ```
+   cd functions
+   firebase emulators:start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. In a new terminal, start the React development server:
+   ```
+   cd ..  # Make sure you're in the main project directory
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. Open your browser and navigate to `http://localhost:3000` to see the application running.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+- `/src`: Contains all React components and application logic
+  - `/src/components`: UI components
+  - `/src/pages`: Page components
+  - `/src/redux`: Redux store, actions, and reducers
+  - `/src/firebase.js`: Firebase configuration
+  - `/src/App.js`: Main application component
+- `/functions`: Contains Firebase Cloud Functions for backend operations
+- `/public`: Static assets and HTML template
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To deploy the application to Firebase Hosting:
 
-### Code Splitting
+1. Build the React application:
+   ```
+   npm run build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Deploy to Firebase:
+   ```
+   firebase deploy
+   ```
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Advanced Configuration
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- React.js
+- Firebase
+- Stripe
+- Material UI
+## Database
 
-### Deployment
+**Firestore Diagrams:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Firestore Diagram 1](assets/firestore1.png "Firestore Diagram 1")
+![Firestore Diagram 2](assets/firestore2.png "Firestore Diagram 2")
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Payments
+
+**Stripe Payment Dashboard:**
+
+![Stripe Payment Dashboard](assets/stripe_payment_dashboard.png "Stripe Payment Dashboard")
+
+---
+
+## Outputs
+
+**Home Screen:**
+
+![Home Screen](assets/home.png "Home Screen")
+
+**Orders Screen:**
+
+![Orders Screen](assets/Orders.png "Orders Screen")
+
+**Payment Screen:**
+
+![Payment Screen](assets/payment.png "Payment Screen")
